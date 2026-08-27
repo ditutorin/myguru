@@ -1,0 +1,58 @@
+/* Custom CSS */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll from large elements */
+}
+
+/* Glassmorphism base styles */
+.glassmorphism {
+    backdrop-filter: blur(15px); /* Increased blur for stronger effect */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2); /* Slightly less intense shadow */
+    border-radius: 1rem; /* Tailwind's rounded-2xl */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem; /* Tailwind's p-6 */
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden; /* Ensures content stays within rounded borders */
+}
+
+/* Specific styling for menu items */
+.menu-item {
+    min-height: 180px; /* Ensure consistent height for menu items */
+}
+
+/* Button specific glassmorphism */
+.glass-button {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.glass-button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Digital clock glow effect */
+#digital-clock {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .menu-item {
+        min-height: auto; /* Allow height to adjust on small screens */
+    }
+}
